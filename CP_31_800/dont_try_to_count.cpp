@@ -1,38 +1,6 @@
 #include <bits/stdc++.h>
 
 
-void check(std::string &a,std::string &b,int &temp)
-{
-
-    int p{};
-    int q{};
-
-    while(p<a.size() && q<b.size())
-    {        
-        if(a[p]==b[q])
-        {
-            p++;
-            q++;
-        }
-        else
-        {
-            p++;
-        }
-    }
-
-    if(q==b.size())
-    {
-        return;
-    }
-    else
-    {
-        a+=a;
-        temp++;
-        check(a,b,temp);
-    }
-    
-}
-
 
 int main()
 {
@@ -54,12 +22,37 @@ int main()
         std::cin>>s;
 
         int temp{};
+        int flag{};
 
-        check(x,s,temp);
+        while(temp<=6)
+        {
+            if(x.find(s)!=std::string::npos)
+            {
+                flag=1;
+                break;
+            }
+            else
+            {
+                x+=x;
+            }
+            ++temp;
+        }
 
-        std::cout<<temp<<"\n";
+        if(flag==1)
+        {
+            std::cout<<temp<<std::endl;
+        }
+        else
+        {
+            std::cout<<-1<<std::endl;
+        }
+        
+
+
  
 
 
     }
 }
+
+

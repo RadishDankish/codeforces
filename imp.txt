@@ -1,0 +1,16 @@
+check range of numbers stored in ARRAY as they can be very big.
+to check if power of two (x&(x-1))==false then power of two;
+to get last digit -> n%10
+AM>=GM
+sum of two sides of triangle > third side
+
+To find prime we can find them in pairs and one of number is below sqrt(n)
+----> other above so check only till sqrt(n)
+
+sieve of erastothenes-> go to multiples of prime and mark them as non
+prime, starting point is square of that number ex- for 7 start from 49
+(initialize an array of n size and initially mark everything as 
+prime and then start crossing out)
+
+
+
