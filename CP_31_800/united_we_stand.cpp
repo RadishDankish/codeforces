@@ -16,20 +16,47 @@ int main()
             std::cin>>arr[j];
         }
         
-        std::vector<int> b;
-        std::vector<int> c;
+        std::sort(arr.begin(),arr.end());
 
-        for(int j{};j<n;j++)
+        int it{};
+        int temp{};
+        
+        if(arr[0]==arr[n-1])
         {
-            if(arr[j]==1)
-            {
-                b.push_back(arr[j]);
-            }
-            else
-            {
-                
-            }
+            std::cout<<-1<<"\n";
+            temp=n+1;
         }
+        else
+        {
+            while(arr[it]==arr[0])
+            {
+                it++;
+            }
+            std::cout<<it<<" "<<n-it<<"\n";
+            
+        }
+
+        
+        if(temp<n)
+        {
+            while(temp<it)
+            {
+                std::cout<<arr[temp]<<" ";
+                temp++;
+            }
+
+            std::cout<<std::endl;
+
+            while(temp<n)
+            {
+                std::cout<<arr[temp]<<" ";
+                temp++;
+            }
+
+            std::cout<<std::endl;
+        }
+      
+        
 
     }
 

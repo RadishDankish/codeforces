@@ -12,5 +12,21 @@ prime, starting point is square of that number ex- for 7 start from 49
 (initialize an array of n size and initially mark everything as 
 prime and then start crossing out)
 
+property of AP -> sum of terms equidistant from start and end are same 
+always ex -> t1 + tn = t2 + t(n-1)
+
+1,2,3...n is AP
+
+xor properties-> a^a=0 & a^0=a
+
+when taking numbers of range [n,n] it will be only n not n+non
+
+GREEDY- for a problem which needs max or min result
+choose locally optimal soln
+
+first check i<n then any other conditions or it goes out of bound
+
+look for precision issues for few functions like log and pow;
+
 
 
